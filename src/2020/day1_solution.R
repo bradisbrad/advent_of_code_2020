@@ -4,7 +4,7 @@
 library(tidyverse)
 library(here)
 
-data <- read_tsv(here('data/day1_input.txt'), col_names = F)
+data <- read_tsv(here('data/2020/day1_input.txt'), col_names = F)
 
 a1 <- 
   expand_grid(data, 

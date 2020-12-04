@@ -3,7 +3,7 @@
 #     the given letter. Find count of valid passwords given new policy.
 
 a1 <- 
-  read_tsv(here('data/day2_input.txt'), col_names = F) %>% 
+  read_tsv(here('data/2020/day2_input.txt'), col_names = F) %>% 
     separate(X1, c('policy', 'pass'), sep = ": ") %>% 
     mutate(min = as.numeric(str_extract(policy, '[0-9]+')),
            max = as.numeric(str_remove(str_extract(policy, '-[0-9]+'), '-')),
@@ -13,7 +13,7 @@ a1 <-
     summarize(cnt = sum(valid))
   
 a2 <- 
-  read_tsv(here('data/day2_input.txt'), col_names = F) %>% 
+  read_tsv(here('data/2020/day2_input.txt'), col_names = F) %>% 
     separate(X1, c('policy', 'pass'), sep = ": ") %>% 
     mutate(pos1 = as.numeric(str_extract(policy, '[0-9]+')),
            pos2 = as.numeric(str_remove(str_extract(policy, '-[0-9]+'), '-')),

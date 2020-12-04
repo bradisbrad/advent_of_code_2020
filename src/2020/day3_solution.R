@@ -2,7 +2,7 @@
 # Q2: Product of trees encountered for several slopes?
 library(tidyverse)
 
-data <- read_tsv(here('data/day3_input.txt'), col_names = F)
+data <- read_tsv(here('data/2020/day3_input.txt'), col_names = F)
 
 # 31 wide
 # str_length(data$X1)
